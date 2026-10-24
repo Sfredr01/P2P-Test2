@@ -1,0 +1,41 @@
+{
+  "name": "p2p-api",
+  "version": "1.0.0",
+  "description": "Agent-first Purchase-to-Pay API (PO lifecycle, 3-way match, GL posting) with an MCP tool server",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "db:seed": "tsx scripts/db-seed.ts",
+    "db:view": "tsx scripts/db-view.ts",
+    "mcp": "tsx src/mcp/stdio.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sfredr01/P2P-Test2.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "express": "^5.3.0",
+    "pino": "^10.4.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/supertest": "^7.2.1",
+    "pino-pretty": "^13.2.0",
+    "supertest": "^7.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
